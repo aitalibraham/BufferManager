@@ -4,17 +4,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		BufferManager bm=new BufferManager();
-		bm.setLRU();
+		bm.setFIFO();
 		Page a = new Page("a");
 		Page b = new Page("b");
 		Page c = new Page("c");
 		Page d = new Page("d");
+		Page e = new Page("e");
 		bm.addPage(a);
 		bm.addPage(b);
 		bm.addPage(c);
 		bm.addPage(d);
-		bm.addPage(a);
-		bm.addPage(a);
+		bm.addPage(e);
+		
+
+
+
 		
 		System.out.println(bm.toString());
 		

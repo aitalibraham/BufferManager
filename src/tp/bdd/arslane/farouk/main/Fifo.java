@@ -4,8 +4,12 @@ public class Fifo implements Policy{
 
 	@Override
 	public Pool addPage(Page page, Pool pool) {
-		return pool;		
-	}
+		if(pool.getSlotsSize() == 4)
+				pool.removeFromSlots(0);
+		pool.addToSlots(page);
+		
+		return pool;
+	}	
 
 
 
