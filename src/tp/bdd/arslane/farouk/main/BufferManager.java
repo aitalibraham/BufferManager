@@ -10,6 +10,9 @@ public class BufferManager {
 	public void setFIFO() {
 		this.policy=new Fifo();
 	}
+	public void setMRU() {
+		this.policy=new Mru();
+	}
 	
 	public void addPage(Page page) {
 		this.policy.addPage(page, this.pool);
