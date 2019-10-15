@@ -15,4 +15,20 @@ public class Pool {
 	public String toString() {
 		return slots.toString();
 	}
+	
+	public void addToSlots(Page page) {
+		this.slots.add(page);
+	}
+	public void removeFromSlots(Page page) {
+		this.slots.remove(page);
+	}
+	public void removeFromSlots(int index) {
+		this.slots.remove(index);
+	}
+	public int getSlotsSize() {
+		return this.slots.size();
+	}
+	public boolean contains(Page page) {
+		return this.slots.contains(page);
+	}
 }
