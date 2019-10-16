@@ -1,25 +1,21 @@
 package tp.bdd.arslane.farouk.main;
 
-<<<<<<< HEAD
-import java.util.List;
 
 public class Clock implements Policy{
+	public int size = 4;
+	public int clockwise = 0;
 	
 	@Override
 	public Pool addPage(Page page, Pool pool) {
 		// TODO Auto-generated method stub
+		while( pool.slots.get(clockwise).flag != 0) {
+			pool.slots.get(clockwise).flag = 0;
+			clockwise++;
+			clockwise = clockwise % size;
+		}
 		
-		return null;
+		pool.slots.set(clockwise, page);
+		return pool;
 	}
 	
-=======
-public class Clock implements Policy{
-
-	@Override
-	public Pool addPage(Page page, Pool pool) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
->>>>>>> FIFO, MRU, Clock vide
 }
