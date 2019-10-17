@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		BufferManager bm=new BufferManager();
-		bm.setMRU();
+		bm.setCLOCK();
 		Page a = new Page("a");
 		Page b = new Page("b");
 		Page c = new Page("c");
