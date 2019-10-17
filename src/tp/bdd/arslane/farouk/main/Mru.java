@@ -11,6 +11,7 @@ public class Mru implements Policy{
 			if(pool.getSlotsSize() == 4)
 				pool.removeFromSlots(3);
 			pool.addToSlots(page);
+			pool.addMiss();
 		}
 		
 		return pool;

@@ -25,12 +25,14 @@ public class Pool {
 	}
 	public void removeFromSlots(int index) {
 		this.slots.remove(index);
-		this.pagesMisses++;
 	}
 	public int getSlotsSize() {
 		return this.slots.size();
 	}
 	public boolean contains(Page page) {
 		return this.slots.contains(page);
+	}
+	public void addMiss() {
+		this.pagesMisses++;
 	}
 }
