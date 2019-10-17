@@ -13,7 +13,9 @@ public class BufferManager {
 	public void setMRU() {
 		this.policy=new Mru();
 	}
-	
+	public void setCLOCK() {
+		this.policy=new Clock();
+	}
 	public void addPage(Page page) {
 		this.policy.addPage(page, this.pool);
 	}

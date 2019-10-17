@@ -6,6 +6,7 @@ import java.util.List;
 public class Pool {
 
 	public List<Page> slots;
+	public int pagesMisses=0;
 	
 	public Pool() {
 		slots = new ArrayList<Page>();
@@ -24,6 +25,7 @@ public class Pool {
 	}
 	public void removeFromSlots(int index) {
 		this.slots.remove(index);
+		this.pagesMisses++;
 	}
 	public int getSlotsSize() {
 		return this.slots.size();

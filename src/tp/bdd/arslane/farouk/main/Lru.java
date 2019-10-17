@@ -1,7 +1,7 @@
 package tp.bdd.arslane.farouk.main;
 
 public class Lru implements Policy{
-
+	
 	@Override
 	public Pool addPage(Page page, Pool pool) {
 		if(pool.contains(page)) {
