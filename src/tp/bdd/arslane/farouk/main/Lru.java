@@ -11,6 +11,7 @@ public class Lru implements Policy{
 			if(pool.getSlotsSize() == 4)
 				pool.removeFromSlots(0);
 			pool.addToSlots(page);
+			pool.addMiss();
 		}
 		
 		return pool;
